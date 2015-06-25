@@ -7,7 +7,12 @@
 //
 
 #import <QuartzCore/QuartzCore.h>
+#import <UIKit/UIKit.h>
 
-@interface WobbleAnimation : CAAnimation
+@interface WobbleAnimator : NSObject
+
+- (instancetype)initWithTarget:(UIView*) t;
+- (void)startAnimation;
+- (void)stopAnimation;
 
 @end
