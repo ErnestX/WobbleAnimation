@@ -14,6 +14,7 @@
 		CA34484A1B3CB4FE00227576 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA3448491B3CB4FE00227576 /* Images.xcassets */; };
 		CA34484D1B3CB4FE00227576 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA34484B1B3CB4FE00227576 /* LaunchScreen.xib */; };
 		CA3448591B3CB4FE00227576 /* WobbleAnimationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CA3448581B3CB4FE00227576 /* WobbleAnimationTests.m */; };
+		CA3448641B3CB56300227576 /* WobbleAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = CA3448631B3CB56300227576 /* WobbleAnimation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		CA3448521B3CB4FE00227576 /* WobbleAnimationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WobbleAnimationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA3448571B3CB4FE00227576 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA3448581B3CB4FE00227576 /* WobbleAnimationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WobbleAnimationTests.m; sourceTree = "<group>"; };
+		CA3448621B3CB56300227576 /* WobbleAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WobbleAnimation.h; sourceTree = "<group>"; };
+		CA3448631B3CB56300227576 /* WobbleAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WobbleAnimation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +88,8 @@
 				CA3448411B3CB4FE00227576 /* AppDelegate.m */,
 				CA3448431B3CB4FE00227576 /* ViewController.h */,
 				CA3448441B3CB4FE00227576 /* ViewController.m */,
+				CA3448621B3CB56300227576 /* WobbleAnimation.h */,
+				CA3448631B3CB56300227576 /* WobbleAnimation.m */,
 				CA3448461B3CB4FE00227576 /* Main.storyboard */,
 				CA3448491B3CB4FE00227576 /* Images.xcassets */,
 				CA34484B1B3CB4FE00227576 /* LaunchScreen.xib */,
@@ -222,6 +227,7 @@
 				CA3448451B3CB4FE00227576 /* ViewController.m in Sources */,
 				CA3448421B3CB4FE00227576 /* AppDelegate.m in Sources */,
 				CA34483F1B3CB4FE00227576 /* main.m in Sources */,
+				CA3448641B3CB56300227576 /* WobbleAnimation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
