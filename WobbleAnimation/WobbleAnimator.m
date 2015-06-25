@@ -81,26 +81,6 @@
             target.layer.anchorPoint = anchor;
             break;
         }
-            //        case 4: {
-            //            target.transform = CGAffineTransformMakeRotation(-0.01);
-            //            target.layer.anchorPoint = anchor;
-            //            break;
-            //        }
-            //        case 5: {
-            //            target.transform = CGAffineTransformMakeRotation(0.01);
-            //            target.layer.anchorPoint = anchor;
-            //            break;
-            //        }
-            //        case 6: {
-            //            target.transform = CGAffineTransformMakeRotation(0.0);
-            //            target.layer.anchorPoint = anchor;
-            //            break;
-            //        }
-            //        case 7: {
-            //            target.transform = CGAffineTransformMakeRotation(0.025);
-            //            target.layer.anchorPoint = anchor;
-            //            break;
-            //        }
     }
 }
 
