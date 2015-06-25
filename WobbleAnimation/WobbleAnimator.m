@@ -84,11 +84,11 @@
     }
 }
 
-NSInteger nextFrameNum(NSInteger flag) {
-    if (flag < 0) {
+NSInteger nextFrameNum(NSInteger frameNum) {
+    if (frameNum < 0) {
         return 0;
-    } else if (flag < ANIM_TOTOAL_NUM_OF_FRAME) {
-        return flag + 1;
+    } else if (frameNum < ANIM_TOTOAL_NUM_OF_FRAME) {
+        return frameNum + 1;
     } else {
         return 0;
     }
