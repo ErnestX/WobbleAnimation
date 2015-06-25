@@ -1,0 +1,433 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CA34483F1B3CB4FE00227576 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CA34483E1B3CB4FE00227576 /* main.m */; };
+		CA3448421B3CB4FE00227576 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CA3448411B3CB4FE00227576 /* AppDelegate.m */; };
+		CA3448451B3CB4FE00227576 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA3448441B3CB4FE00227576 /* ViewController.m */; };
+		CA3448481B3CB4FE00227576 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA3448461B3CB4FE00227576 /* Main.storyboard */; };
+		CA34484A1B3CB4FE00227576 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA3448491B3CB4FE00227576 /* Images.xcassets */; };
+		CA34484D1B3CB4FE00227576 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA34484B1B3CB4FE00227576 /* LaunchScreen.xib */; };
+		CA3448591B3CB4FE00227576 /* WobbleAnimationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CA3448581B3CB4FE00227576 /* WobbleAnimationTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CA3448531B3CB4FE00227576 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CA3448311B3CB4FE00227576 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CA3448381B3CB4FE00227576;
+			remoteInfo = WobbleAnimation;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CA3448391B3CB4FE00227576 /* WobbleAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WobbleAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA34483D1B3CB4FE00227576 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CA34483E1B3CB4FE00227576 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CA3448401B3CB4FE00227576 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		CA3448411B3CB4FE00227576 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		CA3448431B3CB4FE00227576 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		CA3448441B3CB4FE00227576 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		CA3448471B3CB4FE00227576 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CA3448491B3CB4FE00227576 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		CA34484C1B3CB4FE00227576 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		CA3448521B3CB4FE00227576 /* WobbleAnimationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WobbleAnimationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA3448571B3CB4FE00227576 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CA3448581B3CB4FE00227576 /* WobbleAnimationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WobbleAnimationTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CA3448361B3CB4FE00227576 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA34484F1B3CB4FE00227576 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CA3448301B3CB4FE00227576 = {
+			isa = PBXGroup;
+			children = (
+				CA34483B1B3CB4FE00227576 /* WobbleAnimation */,
+				CA3448551B3CB4FE00227576 /* WobbleAnimationTests */,
+				CA34483A1B3CB4FE00227576 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CA34483A1B3CB4FE00227576 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CA3448391B3CB4FE00227576 /* WobbleAnimation.app */,
+				CA3448521B3CB4FE00227576 /* WobbleAnimationTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CA34483B1B3CB4FE00227576 /* WobbleAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				CA3448401B3CB4FE00227576 /* AppDelegate.h */,
+				CA3448411B3CB4FE00227576 /* AppDelegate.m */,
+				CA3448431B3CB4FE00227576 /* ViewController.h */,
+				CA3448441B3CB4FE00227576 /* ViewController.m */,
+				CA3448461B3CB4FE00227576 /* Main.storyboard */,
+				CA3448491B3CB4FE00227576 /* Images.xcassets */,
+				CA34484B1B3CB4FE00227576 /* LaunchScreen.xib */,
+				CA34483C1B3CB4FE00227576 /* Supporting Files */,
+			);
+			path = WobbleAnimation;
+			sourceTree = "<group>";
+		};
+		CA34483C1B3CB4FE00227576 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CA34483D1B3CB4FE00227576 /* Info.plist */,
+				CA34483E1B3CB4FE00227576 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CA3448551B3CB4FE00227576 /* WobbleAnimationTests */ = {
+			isa = PBXGroup;
+			children = (
+				CA3448581B3CB4FE00227576 /* WobbleAnimationTests.m */,
+				CA3448561B3CB4FE00227576 /* Supporting Files */,
+			);
+			path = WobbleAnimationTests;
+			sourceTree = "<group>";
+		};
+		CA3448561B3CB4FE00227576 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CA3448571B3CB4FE00227576 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CA3448381B3CB4FE00227576 /* WobbleAnimation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CA34485C1B3CB4FE00227576 /* Build configuration list for PBXNativeTarget "WobbleAnimation" */;
+			buildPhases = (
+				CA3448351B3CB4FE00227576 /* Sources */,
+				CA3448361B3CB4FE00227576 /* Frameworks */,
+				CA3448371B3CB4FE00227576 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WobbleAnimation;
+			productName = WobbleAnimation;
+			productReference = CA3448391B3CB4FE00227576 /* WobbleAnimation.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CA3448511B3CB4FE00227576 /* WobbleAnimationTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CA34485F1B3CB4FE00227576 /* Build configuration list for PBXNativeTarget "WobbleAnimationTests" */;
+			buildPhases = (
+				CA34484E1B3CB4FE00227576 /* Sources */,
+				CA34484F1B3CB4FE00227576 /* Frameworks */,
+				CA3448501B3CB4FE00227576 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CA3448541B3CB4FE00227576 /* PBXTargetDependency */,
+			);
+			name = WobbleAnimationTests;
+			productName = WobbleAnimationTests;
+			productReference = CA3448521B3CB4FE00227576 /* WobbleAnimationTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CA3448311B3CB4FE00227576 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "Jialiang Xiang";
+				TargetAttributes = {
+					CA3448381B3CB4FE00227576 = {
+						CreatedOnToolsVersion = 6.3.1;
+					};
+					CA3448511B3CB4FE00227576 = {
+						CreatedOnToolsVersion = 6.3.1;
+						TestTargetID = CA3448381B3CB4FE00227576;
+					};
+				};
+			};
+			buildConfigurationList = CA3448341B3CB4FE00227576 /* Build configuration list for PBXProject "WobbleAnimation" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CA3448301B3CB4FE00227576;
+			productRefGroup = CA34483A1B3CB4FE00227576 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CA3448381B3CB4FE00227576 /* WobbleAnimation */,
+				CA3448511B3CB4FE00227576 /* WobbleAnimationTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CA3448371B3CB4FE00227576 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA3448481B3CB4FE00227576 /* Main.storyboard in Resources */,
+				CA34484D1B3CB4FE00227576 /* LaunchScreen.xib in Resources */,
+				CA34484A1B3CB4FE00227576 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA3448501B3CB4FE00227576 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CA3448351B3CB4FE00227576 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA3448451B3CB4FE00227576 /* ViewController.m in Sources */,
+				CA3448421B3CB4FE00227576 /* AppDelegate.m in Sources */,
+				CA34483F1B3CB4FE00227576 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA34484E1B3CB4FE00227576 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA3448591B3CB4FE00227576 /* WobbleAnimationTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CA3448541B3CB4FE00227576 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CA3448381B3CB4FE00227576 /* WobbleAnimation */;
+			targetProxy = CA3448531B3CB4FE00227576 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CA3448461B3CB4FE00227576 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CA3448471B3CB4FE00227576 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CA34484B1B3CB4FE00227576 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CA34484C1B3CB4FE00227576 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CA34485A1B3CB4FE00227576 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		CA34485B1B3CB4FE00227576 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CA34485D1B3CB4FE00227576 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = WobbleAnimation/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		CA34485E1B3CB4FE00227576 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = WobbleAnimation/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		CA3448601B3CB4FE00227576 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = WobbleAnimationTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WobbleAnimation.app/WobbleAnimation";
+			};
+			name = Debug;
+		};
+		CA3448611B3CB4FE00227576 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = WobbleAnimationTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WobbleAnimation.app/WobbleAnimation";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CA3448341B3CB4FE00227576 /* Build configuration list for PBXProject "WobbleAnimation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA34485A1B3CB4FE00227576 /* Debug */,
+				CA34485B1B3CB4FE00227576 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CA34485C1B3CB4FE00227576 /* Build configuration list for PBXNativeTarget "WobbleAnimation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA34485D1B3CB4FE00227576 /* Debug */,
+				CA34485E1B3CB4FE00227576 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		CA34485F1B3CB4FE00227576 /* Build configuration list for PBXNativeTarget "WobbleAnimationTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA3448601B3CB4FE00227576 /* Debug */,
+				CA3448611B3CB4FE00227576 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CA3448311B3CB4FE00227576 /* Project object */;
+}
