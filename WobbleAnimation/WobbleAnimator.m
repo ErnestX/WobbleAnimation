@@ -14,8 +14,10 @@
 
 @implementation WobbleAnimator {
     CADisplayLink* displayLink;
+    NSTimer* frameDurationTimer;
     CGPoint anchor;
     UIView* target;
+    BOOL canGotoNextFrame;
 }
 
 - (instancetype)initWithTarget:(UIView*) t
@@ -34,20 +36,39 @@
 
 - (void)startAnimation
 {
+    [frameDurationTimer invalidate];
     [displayLink invalidate];
     [self resetAnchorAndTransform];
+    canGotoNextFrame = YES;
     
-    displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(nextFrame)];
+    frameDurationTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(readyForNextFrame) userInfo:nil repeats:YES];
+    
+    displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(tryGotoNextFrame)];
     [displayLink addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSDefaultRunLoopMode];
 }
 
 - (void)stopAnimation
 {
+    [frameDurationTimer invalidate];
     [displayLink invalidate];
+    canGotoNextFrame = NO;
+    
     [self resetAnchorAndTransform];
 }
 
-- (void)nextFrame
+- (void)readyForNextFrame
+{
+    canGotoNextFrame = YES;
+}
+
+- (void)tryGotoNextFrame
+{
+    if (canGotoNextFrame) {
+        [self gotoNextFrame];
+    }
+}
+
+- (void)gotoNextFrame
 {
     static NSInteger animFrameNum = 0;
     static NSInteger screenFrameCounter = 0;
@@ -82,6 +103,8 @@
             break;
         }
     }
+    
+    canGotoNextFrame = NO;
 }
 
 NSInteger nextFrameNum(NSInteger frameNum) {
