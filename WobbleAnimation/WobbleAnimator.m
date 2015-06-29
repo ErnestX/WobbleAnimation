@@ -10,14 +10,15 @@
 
 #define ARC4RANDOM_MAX 0x100000000
 #define ANIM_TOTOAL_NUM_OF_FRAME 4
-#define SCREEN_FRAME_RATE_OVER_ANIM_FRAME_RATE 1
+#define FRAME_RATE 0.05
 
 @implementation WobbleAnimator {
     CADisplayLink* displayLink;
     NSTimer* frameDurationTimer;
-    CGPoint anchor;
-    UIView* target;
     BOOL canGotoNextFrame;
+    
+    UIView* target;
+    CGPoint anchor;
 }
 
 - (instancetype)initWithTarget:(UIView*) t
@@ -39,9 +40,8 @@
     [frameDurationTimer invalidate];
     [displayLink invalidate];
     [self resetAnchorAndTransform];
-    canGotoNextFrame = YES;
     
-    frameDurationTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(readyForNextFrame) userInfo:nil repeats:YES];
+    frameDurationTimer = [NSTimer scheduledTimerWithTimeInterval:FRAME_RATE target:self selector:@selector(readyForNextFrame) userInfo:nil repeats:YES];
     
     displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(tryGotoNextFrame)];
     [displayLink addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSDefaultRunLoopMode];
@@ -71,15 +71,9 @@
 - (void)gotoNextFrame
 {
     static NSInteger animFrameNum = 0;
-    static NSInteger screenFrameCounter = 0;
-    
-    if (screenFrameCounter > SCREEN_FRAME_RATE_OVER_ANIM_FRAME_RATE) {
-        animFrameNum = nextFrameNum(animFrameNum);
-        anchor = CGPointMake(0.49 + ((float)random() / ARC4RANDOM_MAX) * 0.02, 0.49 + ((float)random() / ARC4RANDOM_MAX) * 0.02);
-        screenFrameCounter = 0;
-    } else {
-        screenFrameCounter++;
-    }
+
+    animFrameNum = nextFrameNum(animFrameNum);
+    anchor = CGPointMake(0.49 + ((float)random() / ARC4RANDOM_MAX) * 0.02, 0.49 + ((float)random() / ARC4RANDOM_MAX) * 0.02);
     
     switch (animFrameNum) {
         case 0: {
@@ -103,7 +97,6 @@
             break;
         }
     }
-    
     canGotoNextFrame = NO;
 }
 
