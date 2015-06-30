@@ -35,25 +35,63 @@
     target.transform = CGAffineTransformIdentity;
 }
 
+//- (void)startAnimation
+//{
+//    [frameDurationTimer invalidate];
+//    [displayLink invalidate];
+//    [self resetAnchorAndTransform];
+//    
+//    frameDurationTimer = [NSTimer scheduledTimerWithTimeInterval:FRAME_RATE target:self selector:@selector(readyForNextFrame) userInfo:nil repeats:YES];
+//    
+//    displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(tryGotoNextFrame)];
+//    [displayLink addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSDefaultRunLoopMode];
+//}
+//
+//- (void)stopAnimation
+//{
+//    [frameDurationTimer invalidate];
+//    [displayLink invalidate];
+//    canGotoNextFrame = NO;
+//    
+//    [self resetAnchorAndTransform];
+//}
+
 - (void)startAnimation
 {
-    [frameDurationTimer invalidate];
-    [displayLink invalidate];
-    [self resetAnchorAndTransform];
+    CAKeyframeAnimation* animation1 = [CAKeyframeAnimation animation];
+    animation1.keyPath = @"transform.rotation.z";
+    animation1.duration = 0.2;
+    animation1.repeatCount = INFINITY;
     
-    frameDurationTimer = [NSTimer scheduledTimerWithTimeInterval:FRAME_RATE target:self selector:@selector(readyForNextFrame) userInfo:nil repeats:YES];
+    NSNumber* frame11 = @(0.015);
+    NSNumber* frame12 = @(0.005);
+    NSNumber* frame13 = @(-0.03);
+    NSNumber* frame14 = @(-0.005);
     
-    displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(tryGotoNextFrame)];
-    [displayLink addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSDefaultRunLoopMode];
+    animation1.values = @[frame11,frame12,frame13,frame14];
+    animation1.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
+    [target.layer addAnimation:animation1 forKey:@"wobble_rotation"];
+    
+    CAKeyframeAnimation* animation2 = [CAKeyframeAnimation animation];
+    animation2.keyPath = @"transform.translation";
+    animation2.duration = 0.13;
+    animation2.repeatCount = INFINITY;
+    
+    NSValue* frame21 = [NSValue valueWithCGSize:CGSizeMake(-1.0, 0.55)];
+    NSValue* frame22 = [NSValue valueWithCGSize:CGSizeMake(0.0, 0.8)];
+    NSValue* frame23 = [NSValue valueWithCGSize:CGSizeMake(0.3, -0.4)];
+    NSValue* frame24 = [NSValue valueWithCGSize:CGSizeMake(-0.1, 1.0)];
+    NSValue* frame25 = [NSValue valueWithCGSize:CGSizeMake(0.55, -0.45)];
+    
+    animation2.values = @[frame21,frame22,frame23,frame24,frame25];
+    animation2.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
+    [target.layer addAnimation:animation2 forKey:@"wobble_translation"];
 }
 
 - (void)stopAnimation
 {
-    [frameDurationTimer invalidate];
-    [displayLink invalidate];
-    canGotoNextFrame = NO;
-    
-    [self resetAnchorAndTransform];
+    [target.layer removeAnimationForKey:@"wobble_rotation"];
+    [target.layer removeAnimationForKey:@"wobble_translation"];
 }
 
 - (void)readyForNextFrame

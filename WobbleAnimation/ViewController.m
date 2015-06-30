@@ -21,7 +21,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    redView = [[UIView alloc]initWithFrame:CGRectMake(0.0, 0.0, 100, 100)];
+    redView = [[UIView alloc]initWithFrame:CGRectMake(0.0, 0.0, 200, 200)];
     redView.layer.cornerRadius = 20.0;
     redView.backgroundColor = [UIColor redColor];
     redView.center = self.view.center;
