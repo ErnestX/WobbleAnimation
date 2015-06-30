@@ -9,8 +9,8 @@
 #import "WobbleAnimator.h"
 
 #define ARC4RANDOM_MAX 0x100000000
-#define ANIM_TOTOAL_NUM_OF_FRAME 4
-#define FRAME_RATE 0.05
+#define ROTATION_FRAMERATE 0.2
+#define TRANSLATION_FRAMERATE 0.13
 
 @implementation WobbleAnimator {
     UIView* target;
@@ -26,7 +26,7 @@
 {
     CAKeyframeAnimation* animation1 = [CAKeyframeAnimation animation];
     animation1.keyPath = @"transform.rotation.z";
-    animation1.duration = 0.2;
+    animation1.duration = ROTATION_FRAMERATE;
     animation1.repeatCount = INFINITY;
     
     NSNumber* frame11 = @(0.015);
@@ -40,7 +40,7 @@
     
     CAKeyframeAnimation* animation2 = [CAKeyframeAnimation animation];
     animation2.keyPath = @"transform.translation";
-    animation2.duration = 0.13;
+    animation2.duration = TRANSLATION_FRAMERATE;
     animation2.repeatCount = INFINITY;
     
     NSValue* frame21 = [NSValue valueWithCGSize:CGSizeMake(-1.0, 0.55)];
