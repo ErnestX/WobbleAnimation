@@ -14,11 +14,15 @@
 
 @implementation WobbleAnimator {
     UIView* target;
+    float rotationDelay;
+    float translationDelay;
 }
 
 - (instancetype)initWithTarget:(UIView*) t
 {
     target = t;
+    rotationDelay = CACurrentMediaTime() + ((float)arc4random() / ARC4RANDOM_MAX) * ROTATION_FRAMERATE;
+    translationDelay = CACurrentMediaTime() + ((float)arc4random() / ARC4RANDOM_MAX) * TRANSLATION_FRAMERATE;
     return self;
 }
 
@@ -36,8 +40,10 @@
     
     animation1.values = @[frame11,frame12,frame13,frame14];
     animation1.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
+    animation1.beginTime = rotationDelay;
     [target.layer addAnimation:animation1 forKey:@"wobble_rotation"];
     
+
     CAKeyframeAnimation* animation2 = [CAKeyframeAnimation animation];
     animation2.keyPath = @"transform.translation";
     animation2.duration = TRANSLATION_FRAMERATE;
@@ -51,6 +57,7 @@
     
     animation2.values = @[frame21,frame22,frame23,frame24,frame25];
     animation2.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
+    animation2.beginTime = translationDelay;
     [target.layer addAnimation:animation2 forKey:@"wobble_translation"];
 }
 

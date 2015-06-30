@@ -15,29 +15,42 @@
 
 @implementation ViewController {
     UIView* redView;
-    WobbleAnimator* animator;
+    UIView* blueView;
+    
+    WobbleAnimator* animator1;
+    WobbleAnimator* animator2;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     redView = [[UIView alloc]initWithFrame:CGRectMake(0.0, 0.0, 200, 200)];
+    redView.center = CGPointMake(self.view.center.x - 150.0, self.view.center.y);
     redView.layer.cornerRadius = 20.0;
     redView.backgroundColor = [UIColor redColor];
-    redView.center = self.view.center;
     redView.layer.allowsEdgeAntialiasing = YES;
     [self.view addSubview:redView];
     
+    blueView = [[UIView alloc]initWithFrame:CGRectMake(0.0, 0.0, 200, 200)];
+    blueView.center = CGPointMake(self.view.center.x + 150.0, self.view.center.y);
+    blueView.layer.cornerRadius = 20.0;
+    blueView.backgroundColor = [UIColor blueColor];
+    blueView.layer.allowsEdgeAntialiasing = YES;
+    [self.view addSubview:blueView];
+    
     // set up animator
-    animator = [[WobbleAnimator alloc]initWithTarget:redView];
+    animator1 = [[WobbleAnimator alloc]initWithTarget:redView];
+    animator2 = [[WobbleAnimator alloc]initWithTarget:blueView];
 }
 
 - (IBAction)startButtonPressed:(id)sender {
-    [animator startAnimation];
+    [animator1 startAnimation];
+    [animator2 startAnimation];
 }
 
 - (IBAction)stopButtonPressed:(id)sender {
-    [animator stopAnimation];
+    [animator1 stopAnimation];
+    [animator2 stopAnimation];
 }
 
 - (void)didReceiveMemoryWarning {
